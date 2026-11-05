@@ -439,4 +439,75 @@ a{
     top: 70px;
    
 }
+.greenbg{
+    height: 30vh;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+     background-image: linear-gradient(
+    rgba(0, 61, 15, 0.9), rgba(0, 93, 14, 0.9)
+  ), url("image\ folder/bg.jpg");
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  position: relative;
+  gap: 40px;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: small;
+  font-weight: 100;
+}
+.greenbg button{
+    background-color: black;
+    color:white;
+    height: 35px;
+    width: 115px;
+    font-size:xx-small;
+    padding: 10px;
+    border: none;
+}
+.selar-section{
+    height: 50vh;
+    width: 100%;
+    background-color:  rgba(232, 226, 226, 0.5);
+
+} 
+.selar-maindiv{
+     width: 100%;
+    height: 170px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    position: relative;
+   
+    white-space: nowrap;
+ 
+
+}
+
+.selardiv{
+    height: 25vh;
+    width: 300px;
+    background-color: white;
+    font-size: x-small;
+    padding: 20px;
+     position: relative;
+    display: inline-block;
+    margin: 30px;
+   
+
+   
+
+    
+    
+    
+}
+.selarimg{
+    background-image: url(image\ folder/photo.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 50px;
+    width: 50px;
+    border-radius: 30px;
+}
 
