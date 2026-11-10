@@ -1,0 +1,528 @@
+/* =====================================================
+   responsive.css  (Oakberry Real Estate)
+   Isko index.html mein style.css ke BAAD link karein:
+   <link rel="stylesheet" href="style.css">
+   <link rel="stylesheet" href="responsive.css">
+
+   Breakpoints:
+   1200px = small laptop
+   992px  = tablet
+   768px  = bada mobile / chhota tablet
+   576px  = mobile
+   ===================================================== */
+
+html, body{
+    overflow-x: hidden;
+}
+img{
+    max-width: 100%;
+}
+/* Card = 370px total (padding included) -> slider ka 395px step ab sahi baithta hai */
+.selardiv{
+    box-sizing: border-box;
+}
+
+/* Testimonial slider ka mobile animation (card 280px + gap 20px = 300px step) */
+@keyframes slide-sm{
+    0%,   13%   { transform: translateX(0); }
+    16.66%, 30% { transform: translateX(-300px); }
+    33.33%, 46% { transform: translateX(-600px); }
+    50%,   63%  { transform: translateX(-900px); }
+    66.66%, 80% { transform: translateX(-1200px); }
+    83.33%, 96% { transform: translateX(-1500px); }
+    100%        { transform: translateX(-1800px); }
+}
+
+
+/* ================= SMALL LAPTOP (<=1200px) ================= */
+@media (max-width: 1200px){
+
+    /* About section */
+    .about{
+        height: auto;
+        padding: 100px 0 60px;
+    }
+    .lamp{
+        top: 0;
+        left: 0;
+        margin-left: 40px;
+        flex-shrink: 0;
+    }
+    .aboutinfo{
+        top: 0;
+        left: 0;
+        flex: 1;
+        min-width: 0;
+        padding: 0 40px;
+        box-sizing: border-box;
+    }
+    .sub{
+        right: 0;
+        top: 20px;
+    }
+    .abtbut{
+        width: 100%;
+        top: 40px;
+        background-position: center;
+    }
+
+    /* Footer instagram-style images */
+    .foterimg{
+        flex: 1;
+        min-width: 0;
+    }
+}
+
+
+/* ================= TABLET (<=992px) ================= */
+@media (max-width: 992px){
+
+    /* ---------- Navbar ---------- */
+    .navbar2{
+        padding: 0 10px;
+        box-sizing: border-box;
+    }
+    .tag{
+        gap: 20px;
+    }
+    .btn1{
+        right: 0;
+    }
+
+    /* ---------- Hero ---------- */
+    .bg{
+        min-height: 480px;
+        padding: 90px 15px 80px;
+        box-sizing: border-box;
+        text-align: center;
+    }
+    .bg h1{
+        font-size: 44px;
+    }
+    .bgpera{
+        font-size: small;
+    }
+
+    /* ---------- Buy/Rent buttons + Search box ---------- */
+    .button{
+        bottom: 0;
+        margin-top: -50px;
+        z-index: 2;
+    }
+    .mainbox{
+        flex-wrap: wrap;
+        width: 90%;
+        left: 0;
+        bottom: 0;
+        margin: 15px auto 0;
+        background-color: white;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+    }
+    .mainbox div{
+        flex: 1 1 45%;
+        width: auto;
+        height: 70px;
+        box-sizing: border-box;
+        border-bottom: 1px solid rgb(196, 191, 191);
+    }
+    .mainbox input,
+    .mainbox select{
+        width: 100%;
+    }
+    .searchbtn{
+        flex: 1 1 100%;
+        width: 100%;
+        height: 55px;
+    }
+
+    /* ---------- Section heading ---------- */
+    .section2{
+        height: auto;
+        min-height: 200px;
+        padding: 30px 15px;
+        box-sizing: border-box;
+        text-align: center;
+        gap: 8px;
+    }
+    .section2 h1{
+        font-size: 32px;
+    }
+
+    /* ---------- Categories (4 boxes) ---------- */
+    .section3{
+        flex-wrap: wrap;
+        height: auto;
+        gap: 15px;
+        padding: 20px 15px;
+        box-sizing: border-box;
+    }
+    .section3 div{
+        width: calc(25% - 15px);
+        min-width: 150px;
+        height: 170px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    #litag{
+        top: 0;
+        left: 0;
+    }
+    .section3 h1{
+        top: 0;
+        margin-top: 15px;
+    }
+
+    /* ---------- City list ---------- */
+    .newyork{
+        width: 90%;
+        left: 0;
+        margin: 0 auto;
+        height: auto;
+        padding: 15px 0;
+    }
+
+    /* ---------- Featured properties ---------- */
+    .main-house{
+        flex-wrap: wrap;
+        height: auto;
+        padding: 40px 15px;
+        box-sizing: border-box;
+        row-gap: 25px;
+    }
+
+    /* ---------- Video section ---------- */
+    .bg2{
+        height: 60vh;
+        min-height: 320px;
+        text-align: center;
+    }
+    .bg2 h1,
+    .bg2 p{
+        left: 0;
+    }
+    #play{
+        left: 0;
+        display: block;
+        margin: 0 auto;
+    }
+
+    /* ---------- About ---------- */
+    .about{
+        flex-direction: column;
+        align-items: center;
+        padding: 50px 20px;
+        box-sizing: border-box;
+    }
+    .lamp{
+        width: 100%;
+        max-width: 300px;
+        height: 350px;
+        margin: 0 auto;
+        background-position: center;
+    }
+    .aboutinfo{
+        width: 100%;
+        flex: none;
+        padding: 30px 0 0;
+    }
+    .sub{
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 15px;
+        top: 10px;
+    }
+    .sub span{
+        width: 45%;
+    }
+    .sub h1{
+        font-size: 30px;
+    }
+    .abtbut{
+        height: 220px;
+        top: 30px;
+        background-size: cover;
+    }
+
+    /* ---------- Green banner ---------- */
+    .greenbg{
+        flex-direction: column;
+        height: auto;
+        padding: 40px 20px;
+        box-sizing: border-box;
+        gap: 20px;
+        text-align: center;
+    }
+
+    /* ---------- Testimonials ---------- */
+    .selar-section{
+        height: auto;
+        padding: 50px 0 40px;
+    }
+
+    /* ---------- Agents ---------- */
+    .whitebg{
+        height: auto;
+    }
+    .bluebg{
+        width: 100%;
+        height: auto;
+        padding-bottom: 160px;
+    }
+    .bluework{
+        left: 0;
+        top: 0;
+        padding: 50px 20px 0;
+        text-align: center;
+    }
+    .whitebox-main{
+        display: grid;
+        grid-template-columns: repeat(2, 220px);
+        justify-content: center;
+        column-gap: 20px;
+        row-gap: 130px;
+        height: auto;
+        bottom: 0;
+        margin-top: -100px;
+        padding-bottom: 140px;
+    }
+
+    /* ---------- Blog ---------- */
+    .recent-box{
+        flex-wrap: wrap;
+        height: auto;
+        padding: 40px 15px;
+        box-sizing: border-box;
+        row-gap: 25px;
+    }
+    .recentbox-box{
+        height: auto;
+        padding-bottom: 20px;
+    }
+
+    /* ---------- Footer ---------- */
+    .firstfooter{
+        flex-wrap: wrap;
+        height: auto;
+        padding: 50px 25px;
+        box-sizing: border-box;
+        align-items: flex-start;
+        gap: 30px 40px;
+    }
+    .foobox-one{
+        height: auto;
+    }
+    .foobox-two{
+        height: auto;
+        width: auto;
+        min-width: 130px;
+        top: 0;
+    }
+}
+
+
+/* ================= MOBILE (<=768px) ================= */
+@media (max-width: 768px){
+
+    /* ---------- Navbar ---------- */
+    /* Upar wali contact bar mobile pe hide */
+    .navbar{
+        display: none;
+    }
+    .navbar2{
+        height: auto;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 8px 12px;
+        background-color: rgba(0, 0, 0, 0.65);
+    }
+    .tag{
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 6px 16px;
+        padding-top: 8px;
+        font-size: 12px;
+    }
+
+    /* ---------- Hero ---------- */
+    .bg{
+        min-height: 420px;
+        height: 70vh;
+        padding-top: 120px;
+        padding-bottom: 70px;
+    }
+    .bg h1{
+        font-size: 34px;
+    }
+    .bgbtn{
+        width: 140px;
+        height: 38px;
+        font-size: 12px;
+    }
+
+    /* ---------- Section heading ---------- */
+    .section2 h1{
+        font-size: 26px;
+    }
+
+    /* ---------- Categories: 2 x 2 ---------- */
+    .section3 div{
+        width: calc(50% - 10px);
+        min-width: 0;
+        height: 140px;
+    }
+
+    /* ---------- City list ---------- */
+    .newyork p{
+        font-size: 14px;
+        text-align: center;
+    }
+    .newyork button{
+        right: 0;
+        top: 8px;
+        width: 100px;
+    }
+
+    /* ---------- Video ---------- */
+    .bg2 h1{
+        font-size: 24px;
+    }
+
+    /* ---------- Agents: width fit ---------- */
+    .bluework{
+        font-size: large;
+    }
+
+    /* ---------- Footer images ---------- */
+    .foterdiv{
+        flex-wrap: wrap;
+        height: auto;
+    }
+    .foterimg{
+        flex: 1 1 33.33%;
+        height: 150px;
+    }
+
+    /* ---------- Copyright ---------- */
+    .secfooter{
+        height: auto;
+        padding: 15px;
+        box-sizing: border-box;
+        text-align: center;
+    }
+    .secfooter p{
+        overflow-wrap: anywhere;
+    }
+}
+
+
+/* ================= SMALL MOBILE (<=576px) ================= */
+@media (max-width: 576px){
+
+    /* ---------- Hero ---------- */
+    .bg h1{
+        font-size: 28px;
+    }
+
+    /* ---------- Search box: 1 column ---------- */
+    .mainbox div{
+        flex: 1 1 100%;
+    }
+
+    /* ---------- Heading ---------- */
+    .section2 h1{
+        font-size: 22px;
+    }
+
+    /* ---------- City list: chhote buttons ---------- */
+    .newyork p{
+        font-size: 12px;
+    }
+    .newyork button{
+        width: 88px;
+        font-size: 11px;
+    }
+
+    /* ---------- Featured properties: bade cards ---------- */
+    .house1{
+        width: min(90%, 320px);
+    }
+    #houseimg{
+        width: 100%;
+        object-fit: cover;
+    }
+
+    /* ---------- Video ---------- */
+    .bg2 h1{
+        font-size: 20px;
+    }
+    .bg2 p{
+        padding: 0 20px;
+    }
+
+    /* ---------- About ---------- */
+    .aboutinfo h1{
+        font-size: 24px;
+    }
+    .sub span{
+        width: 44%;
+    }
+    .abtbut{
+        height: 160px;
+    }
+
+    /* ---------- Testimonials: chhote cards + naya animation ---------- */
+    .selar-window{
+        width: 280px;
+    }
+    .selar-track{
+        gap: 20px;
+        animation: slide-sm 15s infinite;
+    }
+    .selardiv{
+        width: 280px;
+        padding: 25px 20px;
+    }
+    .selardiv h3{
+        font-size: 17px;
+    }
+    .selarimg{
+        width: 56px;
+        height: 56px;
+    }
+
+    /* ---------- Agents: 1 column ---------- */
+    .whitebox-main{
+        grid-template-columns: 220px;
+    }
+
+    /* ---------- Blog ---------- */
+    .recentbox-box{
+        width: min(90%, 320px);
+    }
+    .recentbox-box img{
+        width: 100%;
+        height: 230px;
+        object-fit: cover;
+    }
+
+    /* ---------- Footer images ---------- */
+    .foterimg{
+        flex: 1 1 50%;
+        height: 130px;
+    }
+
+    /* ---------- Footer ---------- */
+    .firstfooter{
+        flex-direction: column;
+        padding: 40px 25px;
+        gap: 25px;
+    }
+    .foobox-one,
+    .foobox-two{
+        width: 100%;
+    }
+}

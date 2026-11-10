@@ -4,6 +4,10 @@
 }
 body{
     background-color: white;
+    width: 100%;
+   
+   
+   
 }
 .navbar{
     display: flex;
@@ -470,30 +474,319 @@ a{
 .selar-section{
     height: 50vh;
     width: 100%;
-    background-color:  rgba(232, 226, 226, 0.5);
-
-} 
-.selar-maindiv{
-     width: 100%;
-    height: 170px;
+    padding: 50px 0 30px;
+    background-color: rgb(240, 236, 236);
     display: flex;
-   
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Nunito', sans-serif;
+}
 
+
+.selar-window{
+    width: 90%;
+    max-width: 100%;
+    overflow: hidden;
+    padding-top: 25px;         
+    margin-top: -25px;
+   
+}
+
+.selar-track{
+    display: flex;
+    gap: 25px;
+    animation: slide 15s infinite;
+    
 }
 
 .selardiv{
-    height: 25vh;
-    width: 300px;
+    position: relative;
+    width: 370px;
+    flex-shrink: 0;
     background-color: white;
-    font-size: x-small;
-    padding: 20px;
+    padding: 25px 28px;
+    border-radius: 4px;
+   
+  
 }
+
+.quote-icon{
+    position: absolute;
+    top: -20px;
+    left: 18px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #3d7a0a;
+    color: white;
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+     line-height: 1;
+    padding-top: 8px;
+    box-sizing: border-box;
+   
+} 
+
+.selardiv p{
+    font-size: 15px;
+    color: #555;
+    margin: 10px 0 25px;
+}
+
+.selar-person{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
 .selarimg{
+    width: 72px;
+    height: 72px;
     background-image: url(image\ folder/photo.jpeg);
+    border-radius: 50%;
+    background-size: cover;
+
+    background-repeat: no-repeat;
+    border: 2px solid black;
+
+}
+
+.selardiv h3{
+    margin: 0;
+    font-size: 20px;
+    font-weight: 500;
+    color: #222;
+}
+
+.selardiv h5{
+    margin: 4px 0 0;
+    font-size: 12px;
+    font-weight: 400;
+    color: #3d7a0a;
+}
+
+/* Slide animation: 6 cards, har step = 370 + 25 = 395px */
+@keyframes slide{
+    0%,   13%   { transform: translateX(0); }
+    16.66%, 30% { transform: translateX(-395px); }
+    33.33%, 46% { transform: translateX(-790px); }
+    50%,   63%  { transform: translateX(-1185px); }
+    66.66%, 80% { transform: translateX(-1580px); }
+    83.33%, 96% { transform: translateX(-1975px); }
+    100%        { transform: translateX(-2370px); }
+}
+.whitebg{
+  background-color: white;
+  height: 100vh;
+  width: 100%;
+}
+.bluebg{
+    background-color: rgb(4, 4, 52);
+    height: 100vh;
+    width: 65%;
+    color: white;
+}
+.bluework{
+    position: relative;
+    left: 160px;
+    top: 100px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    font-size:large;
+
+}
+.bluework p{
+    font-size: small;
+    color: green;
+    position: relative;
+    bottom: 10px;
+    font-weight: 600;
+    
+}
+.whitebox-main{
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    gap: 20px;
+    bottom: 350px;
+    color: white;
+}
+.whitebox{
+height: 200px;
+    width: 220px;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 50px;
-    width: 50px;
-    border-radius: 30px;
+    
+
 }
+
+.w-box-span{
+    height: 100px;
+    background-color: #04880f;
+    width: 200px;
+    position: relative;
+    top: 200px;
+   padding-left: 20px;
+   font-family: Arial, Helvetica, sans-serif;
+   
+}
+.w-box-span p{
+    font-size: x-small;
+    position: relative;
+    top: 20px;
+}
+.w-box-span h3{
+    position: relative;
+    top: 30px;
+    font-size: medium;
+}
+
+.insta-span i{
+    font-size: x-small;
+ padding-left: 3px;
+ color: white;
+}
+.insta-span span{
+    display:  inline-block;
+    height: 20px;
+    width: 20px;
+    background-color: rgba(0, 0,0, 0.5);
+  border-radius: 50px;
+    position: relative;
+    top: 40px;
+}
+
+.recent-box{
+    height: 90vh;
+    width: 100%;
+    background-color: rgb(240, 236, 236);
+    display: flex;
+    justify-content: center;
+    position: relative;
+    gap: 20px;
+}
+.recentbox-box{
+    height: 400px;
+    width: 230px;
+    background-color: white;
+    font-family: Arial, Helvetica, sans-serif;
+
+
+   
+}
+.recentbox-box p{
+    color:rgb(120, 112, 112) ;
+    font-size: x-small;
+     padding: 15px 20px 5px 20px;
+}
+
+.recentbox-box h3{
+    font-size: small;
+     padding: 15px 20px 5px 20px;
+}
+.recentbox-box :hover h3{
+    color: green;
+}
+.recentbox-box h5{
+    font-size: x-small;
+    color:rgb(120, 112, 112) ;
+    padding: 15px 20px 5px 20px;
+}
+.foterdiv{
+    height: 230px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+   
+    
+  
+    
+}
+.foterimg{
+    height: 230px;
+    width: 200px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.firstfooter{
+    height: 60vh;
+    width: 100%;
+    background-color: rgb(4, 4, 52);
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    position: relative;
+    gap: 30px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.foobox-one{
+    height: 170px;
+    width: 270px;
+   
+    
+
+
+}
+.boxone-span{
+    padding: 10px;
+}
+.boxone-span p{
+    font-size: x-small;
+}
+.boxone-icon{
+    display: flex;
+     position: relative;
+    gap: 10px;
+  
+}
+.boxone-icon div{
+    height: 25px;
+    width: 25px;
+    border-radius: 15px;
+    background-color: green;
+    position: relative;
+    gap: 10px;
+  
+}
+.boxone-icon i{
+    position: relative;
+    left: 6px;
+    font-size: x-small;
+    top: 2px;
+}
+.foobox-two{
+     height: 170px;
+    width: 100px;
+    position: relative;
+    top: 20px;
+
+}
+
+.boxtwo-span p{
+    font-size: x-small;
+    color: rgb(120, 112, 112);
+
+}
+.secfooter{
+    height: 10vh;
+    width: 100%;
+    background-color: rgb(2, 2, 21);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+.secfooter p{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+}
+
+
+
+
 
